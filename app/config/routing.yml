@@ -1,0 +1,3 @@
+PrismPollBundle_backend:
+    prefix: /poll/backend
+    resource: "@PrismPollBundle/Resources/config/routing/backend.yml"

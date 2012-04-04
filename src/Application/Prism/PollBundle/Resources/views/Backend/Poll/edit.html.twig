@@ -1,0 +1,40 @@
+{% extends 'PrismPollBundle:Backend:layout.html.twig' %}
+
+{% block content %}
+    <h1>{{ poll }}</h1>
+
+    <a href="{{ path('PrismPollBundle_backend_poll_list') }}">Back to the list</a><br /><br />
+
+    <form action="{{ path('PrismPollBundle_backend_poll_edit', {'pollId': poll.id }) }}" method="post" novalidate="novalidate" {{ form_enctype(form) }}>
+
+        <table cellspacing="0">
+            {{ form_row(form.name) }}
+            {{ form_row(form.author) }}
+            {{ form_row(form.published) }}
+            {{ form_row(form.closed) }}
+
+            <tr>
+                <td>Choices:</td>
+                <td>
+                    <ul id="opinions" data-prototype="{{ form_widget(form.opinions.get('prototype')) | e }}">
+                        {% for opinion in form.opinions %}
+                            <li>
+                                {{ form_row(opinion.name) }}
+                                <a href="#" class="delete_choice">Delete this choice</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                    <a href="#" id="add_choice">Add a choice</a>
+                </td>
+            </tr>
+    
+            {{ form_row(form._token) }}
+        </table>
+
+        <input type="submit" value="Submit" />
+    </form>
+
+    {% include 'PrismPollBundle:Backend/Poll:edit_js.html.twig' %}
+
+{% endblock %}

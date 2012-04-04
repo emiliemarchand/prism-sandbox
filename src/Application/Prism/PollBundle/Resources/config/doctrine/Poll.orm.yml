@@ -1,0 +1,9 @@
+Application\Prism\PollBundle\Entity\Poll:
+  type: entity
+  table: AppPrismPoll
+  repositoryClass: Application\Prism\PollBundle\Entity\PollRepository
+  fields:
+    author:
+      type: string
+      length: 255
+      nullable: false
