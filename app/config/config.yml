@@ -52,7 +52,7 @@ doctrine:
 stof_doctrine_extensions:
     orm:
         default:
-            timestampable: true:
+            timestampable: true
             sluggable: true
 
 # Swiftmailer Configuration

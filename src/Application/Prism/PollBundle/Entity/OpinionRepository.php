@@ -2,11 +2,11 @@
 
 namespace Application\Prism\PollBundle\Entity;
 
-use Doctrine\ORM\EntityRepository;
+use Prism\PollBundle\Entity\PollRepository as BaseOpinionRepository;
 
 /**
  * OpinionRepository
  */
-class OpinionRepository extends EntityRepository
+class OpinionRepository extends BaseOpinionRepository
 {
 }

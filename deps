@@ -73,6 +73,6 @@
 
 
 ; Prism
-;[PrismPollBundle]
-;    git=http://github.com/emiliemarchand/PrismPollBundle.git
-;    target=/bundles/Prism/PollBundle
+[PrismPollBundle]
+    git=http://github.com/emiliemarchand/PrismPollBundle.git
+    target=/bundles/Prism/PollBundle
